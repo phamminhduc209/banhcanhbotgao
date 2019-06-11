@@ -69,4 +69,46 @@
 			}
 		}
 	}
+	&_function {
+		margin-left: auto;
+		&_inner {
+			position: relative;
+			display: inline-block;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-flow: row wrap;
+			flex-flow: row wrap;
+			-ms-flex-align: center;
+			align-items: center;
+			li {
+				position: relative;
+				margin: 0 7px;
+				transition: background-color .3s;
+			}
+		}
+	}
+	&_divider {
+	    border-left: 1px solid rgba(0,0,0,0.1);
+	    height: 30px;
+	    vertical-align: middle;
+	    position: relative;
+	    margin: 0 7.5px;
+	}
+	&_cart {
+		&_button {
+			a {
+				background-color: #446084;
+			    border-width: 1px;
+			    color: #fff;
+			    font-size: .8em;
+				margin-left: .12em;
+				margin-right: .12em;
+				min-width: 2.5em;
+				padding-left: .6em;
+				padding-right: .6em;
+				display: inline-block;
+			    // border-radius: 5px;
+			}
+		}
+	}
 }
