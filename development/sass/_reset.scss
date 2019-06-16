@@ -6,9 +6,11 @@
 	}
 }
 a {
+	color: #334862;
 	text-decoration: none;
 	transition: all 0.25s;
 	&:hover {
+	    color: #000;
 		text-decoration: none;
   		transition: all 0.25s;
 	}
@@ -55,6 +57,7 @@ p {
 	#{$element} {
 		margin: 0px;
 		padding: 0px;
+		font-size: inherit;
 	}
 }
 body {
