@@ -113,6 +113,7 @@ body {
   max-width: 1080px; }
 
 #main {
+  padding-top: 30px;
   padding-bottom: 30px; }
 
 .product_item {
@@ -195,12 +196,6 @@ body {
       border-top-left-radius: 100%;
       border-bottom-left-radius: 100%; }
 
-footer {
-  background-color: #5b5b5b;
-  padding: 10px 0 15px;
-  font-size: .9em;
-  color: rgba(255, 255, 255, 0.5); }
-
 .icn_payment {
   display: inline-block;
   opacity: .6;
@@ -216,6 +211,143 @@ footer {
     width: auto !important;
     fill: #FFF; }
 
+.td-scroll-up {
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #777;
+  background-color: transparent;
+  border-radius: 100%;
+  z-index: 1;
+  transform: translate3d(0, 70px, 0);
+  -webkit-transform: translate3d(0, 70px, 0);
+  -moz-transform: translate3d(0, 70px, 0);
+  -ms-transform: translate3d(0, 70px, 0);
+  -o-transform: translate3d(0, 70px, 0);
+  -webkit-transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+  -moz-transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+  -o-transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+  transition: transform 0.4s cubic-bezier(0.55, 0, 0.1, 1) 0s; }
+  .td-scroll-up i {
+    color: #777;
+    display: block;
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    top: 7px; }
+  .td-scroll-up:hover {
+    background-color: #446084;
+    border-color: #446084; }
+    .td-scroll-up:hover i {
+      color: #FFF; }
+
+.td-scroll-up-visible {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0); }
+
+.m_breadcrumb .breadcrumb {
+  background: transparent;
+  padding: 0; }
+  .m_breadcrumb .breadcrumb-item a {
+    color: rgba(102, 102, 102, 0.7); }
+    .m_breadcrumb .breadcrumb-item a:hover {
+      color: #111; }
+
+.product_gallery {
+  position: relative; }
+  .product_gallery .expand {
+    border-radius: 100%;
+    border: 2px solid #777;
+    bottom: 10px;
+    color: silver;
+    display: block;
+    left: 10px;
+    line-height: 2.19em;
+    margin-left: .12em;
+    margin-right: .12em;
+    min-width: 2.5em;
+    position: absolute;
+    text-align: center;
+    z-index: 9999; }
+    .product_gallery .expand i {
+      font-size: 1.2em;
+      position: relative;
+      top: 2px; }
+    .product_gallery .expand:hover {
+      background-color: #446084;
+      border-color: #446084; }
+      .product_gallery .expand:hover i {
+        color: #FFF; }
+
+.product_info {
+  padding-top: 10px; }
+  .product_info .name {
+    color: #555;
+    font-size: 1.7em;
+    font-weight: 700;
+    line-height: 1.3;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    position: relative; }
+    .product_info .name:after {
+      background-color: rgba(0, 0, 0, 0.1);
+      content: '';
+      display: block;
+      height: 3px;
+      width: 30px;
+      position: absolute;
+      bottom: 0; }
+  .product_info .price {
+    color: #111;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-weight: bolder;
+    margin: .5em 0;
+    white-space: nowrap; }
+    .product_info .price .currencySymbol {
+      display: inline-block;
+      font-size: .75em;
+      margin-top: .05em;
+      vertical-align: top;
+      text-decoration: underline; }
+  .product_info .formCart {
+    display: flex;
+    align-items: center; }
+  .product_info .control {
+    display: flex;
+    align-items: center;
+    position: relative; }
+    .product_info .control input {
+      border: 1px solid #e1e1e1;
+      font-weight: bold;
+      height: 40px;
+      width: 2.5em;
+      font-weight: normal;
+      text-align: center;
+      border-right: none;
+      border-left: none;
+      -moz-appearance: textfield; }
+      .product_info .control input::-webkit-outer-spin-button, .product_info .control input::-webkit-inner-spin-button {
+        -webkit-appearance: none; }
+    .product_info .control .qty-inc, .product_info .control .qty-dec {
+      border: 1px solid #e1e1e1;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+      width: 21px; }
+      .product_info .control .qty-inc i, .product_info .control .qty-dec i {
+        color: #666;
+        font-size: .97em;
+        font-weight: normal; }
+
 /* ======================== HEADER ======================== */
 .header {
   width: 100%;
@@ -227,8 +359,12 @@ footer {
   .header_inner {
     z-index: 10;
     position: relative; }
+    .header_inner_border {
+      border-bottom: 1px solid rgba(68, 96, 132, 0.1);
+      margin-bottom: -1px; }
   .header_logo {
-    width: 200px; }
+    width: 200px;
+    margin-right: 30px; }
     .header_logo img {
       max-height: 100px; }
   .header_nav {
@@ -260,20 +396,20 @@ footer {
         .header_nav_main li:first-child {
           margin-left: 0 !important; }
         .header_nav_main li a {
-          font-size: .8em;
-          font-weight: 700;
-          letter-spacing: .02em;
-          text-transform: uppercase;
-          font-weight: bolder;
-          padding: 10px 0;
-          display: inline-block;
-          display: -ms-inline-flexbox;
-          display: inline-flex;
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
           -ms-flex-align: center;
+          -ms-flex-wrap: wrap;
           align-items: center;
           color: rgba(102, 102, 102, 0.85);
+          display: -ms-inline-flexbox;
+          display: inline-block;
+          display: inline-flex;
+          flex-wrap: wrap;
+          font-size: .8em;
+          font-weight: 700;
+          font-weight: bolder;
+          letter-spacing: .02em;
+          padding: 10px 0;
+          text-transform: uppercase;
           transition: all .2s; }
         .header_nav_main li:hover a, .header_nav_main li.active a {
           color: rgba(17, 17, 17, 0.85); }
@@ -317,6 +453,9 @@ footer {
     min-width: 2.5em;
     padding-left: .6em;
     padding-right: .6em; }
+    .header_cart_button a:hover {
+      box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.2);
+      color: #FFF; }
   .header_cart_item {
     position: absolute;
     min-width: 260px;
@@ -336,3 +475,10 @@ footer {
 
 /* ======================== Page ======================== */
 /* ======================== FOOTER ======================== */
+footer {
+  background-color: #5b5b5b;
+  padding: 10px 0 15px;
+  font-size: .9em;
+  color: rgba(255, 255, 255, 0.5); }
+  footer .payment {
+    padding: 7.5px 0; }
