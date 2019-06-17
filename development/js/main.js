@@ -14,4 +14,37 @@
     }, 'slow');
   });
 
+  $('.product_qty .qty_inc').click(function () {
+    var val = $('.product_qty .control input').val();
+    $('.product_qty .control input').val(parseInt(val) + 1);
+  });
+  $('.product_qty .qty_dec').click(function () {
+    var val = $('.product_qty .control input').val();
+    if (val > 1)
+    $('.product_qty .control input').val(parseInt(val) - 1);
+  });
+
+  $(document).ready(function() {
+    $(".owl-carousel").each(function(index, el) {
+      var config = $(this).data();
+      config.navText = ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'];
+      config.smartSpeed="800";
+      if($(this).hasClass('owl-style2')){
+        config.animateOut="fadeOut";
+        config.animateIn="fadeIn";    
+      }
+      if($(this).hasClass('dotsData')){
+        config.dotsData="true";
+      }
+      $(this).owlCarousel(config);
+    });
+  });
+
+  $('.shipping_address_other').hide();
+  if($("#other_address").is(':checked')){
+     $(this).parent().next().show();
+  } else {
+    // Code in the case checkbox is NOT checked.
+  }
+
 })(jQuery); // End of use strict
