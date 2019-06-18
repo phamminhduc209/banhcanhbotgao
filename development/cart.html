@@ -19,9 +19,9 @@
     <link rel="icon" href="images/favicon/favicon-32x32.png" type="image/x-icon">
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Font CSS -->
-    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="libs/fontawesome/font-awesome.min.css" rel="stylesheet">
     <!-- style -->
     <link href="css/style.css" rel="stylesheet">
     
@@ -58,16 +58,16 @@
             </div>
             <div class="cart_items">
                 <div class="row">
-                    <div class="col-sm-8">
+                    <div class="col-sm-8 cart_items_list">
                         <form class="" action="#" method="post">
-                            <div class="cart_items__inner">
+                            <div class="cart_items_list__inner">
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th colspan="3">SẢN PHẨM</th>
-                                            <th>GIÁ</th>
-                                            <th>SỐ LƯỢNG</th>
-                                            <th>TỔNG</th>
+                                            <th colspan="3" class="product_name">SẢN PHẨM</th>
+                                            <th class="product_price">GIÁ</th>
+                                            <th class="product_quantity">SỐ LƯỢNG</th>
+                                            <th class="product_subtotal">TỔNG</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -82,6 +82,7 @@
                                             </td>
                                             <td class="product_name" data-title="Sản phẩm">
                                                 <a href="#">Bánh Canh Cá Lốc Hai Nhiên</a>
+                                                <p class="sp"><span>1 x </span><span class="amount">79,000<span class="currencySymbol">₫</span></span></p>
                                             </td>
                                             <td class="product_price">
                                                 <span class="amount">35,000<span class="currencySymbol">₫</span></span>
@@ -139,8 +140,8 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="cart_totals">
+                    <div class="col-sm-4 cart_totals">
+                        <div class="cart_totals_inner">
                             <p class="title"><strong>TỔNG SỐ LƯỢNG</strong></p>
                             <ul>
                                 <li>
@@ -193,12 +194,73 @@
             </div>
         </div>
         <!-- modal -->
+        <div class="m_btn_booknow">
+            <a class="btn" href="#">Đặt Hàng Ngay</a>
+        </div>
+        <!-- m_btn_booknow -->
+
+        <div class="m_menu_mobile_overlay"></div>
+        <div class="m_menu_mobile">
+            <div class="m_menu_mobile_inner">
+                <ul class="m_menu_mobile_items">
+                    <li><a href="cate.html" class="m_menu_mobile_item">Cửa hàng</a></li>
+                    <li><a href="cate.html" class="m_menu_mobile_item">Bánh Canh</a></li>
+                    <li><a href="cate.html" class="m_menu_mobile_item">Miến</a></li>
+                    <li><a href="cate.html" class="m_menu_mobile_item">Món Thêm</a></li>
+                    <li><a href="cate.html" class="m_menu_mobile_item">Nước Uống</a></li>
+                </ul>
+            </div>
+            <button title="Close (Esc)" type="button" class="m_menu_mobile_close">×</button>
+        </div>
+        <!-- m_menu_mobile -->
+
+        <div class="m_cart_mobile_overlay"></div>
+        <div class="m_cart_mobile">
+            <div class="m_cart_mobile_inner">
+                <div class="m_cart_mobile_title text-center">
+                  <h4>Giỏ hàng</h4>
+                </div>
+                <div class="m_cart_mobile_content">
+                    <p class="text-center m_cart_mobile_message">Chưa có sản phẩm trong giỏ hàng.</p>
+                    <div class="header_cart_item">
+                        <ul class="list_mini_cart">
+                            <li class="mini_cart_item">
+                                <a href="#" class="remove" aria-label="Xóa sản phẩm này">×</a>
+                                <a class="name" href="#">
+                                    <img src="images/cart_01.jpg" alt="">Bánh Canh Cá Lốc Hai Nhiên
+                                </a>
+                                <span class="quantity">1 × <span class="amount">35,000<span class="currencySymbol">₫</span></span></span>
+                            </li>
+                            <li class="mini_cart_item">
+                                <a href="#" class="remove" aria-label="Xóa sản phẩm này">×</a>
+                                <a class="name" href="#">
+                                    <img src="images/cart_01.jpg" alt="">Bánh Canh Cá Lốc Hai Nhiên
+                                </a>
+                                <span class="quantity">1 × <span class="amount">35,000<span class="currencySymbol">₫</span></span></span>
+                            </li>
+                            <li class="mini_cart_item">
+                                <a href="#" class="remove" aria-label="Xóa sản phẩm này">×</a>
+                                <a class="name" href="#">
+                                    <img src="images/cart_01.jpg" alt="">Bánh Canh Cá Lốc Hai Nhiên
+                                </a>
+                                <span class="quantity">1 × <span class="amount">35,000<span class="currencySymbol">₫</span></span></span>
+                            </li>
+                        </ul>
+                        <p class="mini_cart_total"><strong>Tổng phụ:</strong> <span class="amount">35,000<span class="currencySymbol">₫</span></span></p>
+                        <p class="mini_cart_button"><a href="cart.html" class="btn">Xem giỏ hàng</a></p>
+                    </div>
+                </div>
+            </div>
+            <button title="Close (Esc)" type="button" class="m_cart_mobile_close">×</button>
+        </div>
+        <!-- m_cart_mobile -->
     </div>
+    <!-- #wrapper -->
 
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
     <!-- JS Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="libs/bootstrap/bootstrap.min.js"></script>
     <!-- JS main -->
     <script src="js/main.js"></script>
 </body>

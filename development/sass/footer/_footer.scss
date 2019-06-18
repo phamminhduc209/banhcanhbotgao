@@ -1,9 +1,26 @@
-footer {
-    background-color: #5b5b5b;
-    padding: 10px 0 15px;
-    font-size: .9em;
-    color: rgba(255,255,255,0.5);
+.footer {
+    &_inner {
+        background-color: #5b5b5b;
+        padding: 10px 0 15px;
+        font-size: .9em;
+        color: rgba(255,255,255,0.5);
+    }
     .payment {
         padding: 7.5px 0;
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 850px) {
+	.footer {
+		padding-bottom: 0 !important;
+	}
+}
+
+@media screen and (max-width: 849px) {
+    .footer {
+	    .payment, .copyright {
+	        text-align: center;
+       	}
     }
 }
