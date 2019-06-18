@@ -39,50 +39,79 @@
         <header class="header">
             <div class="header_inner">
                 <div class="container">
-                    <div class="header_inner_border d-flex align-items-center">
+                    <div class="header_inner_wrap">
                         <div class="header_logo">
-                            <a href="#" title="Bánh Canh Bột Gạo Hai Nhiên">
+                            <a href="index.html" title="Bánh Canh Bột Gạo Hai Nhiên">
                                 <img src="images/logo.png" alt="Bánh Canh Bột Gạo Hai Nhiên">
                             </a>
+                        </div>
+                        <div class="btn_mobile_nav sp">
+                            <span><i class="fa fa-bars" aria-hidden="true"></i></span>
                         </div>
                         <div class="header_nav">
                             <ul class="header_nav_main">
                                 <li class="menu_item active">
-                                    <a href="#" class="nav-top-link">Cửa hàng</a>
+                                    <a href="index.html" class="nav-top-link">Cửa hàng</a>
                                 </li>
                                 <li class="menu_item">
-                                    <a href="#" class="nav-top-link">Bánh Canh</a>
+                                    <a href="cate.html" class="nav-top-link">Bánh Canh</a>
                                 </li>
                                 <li class="menu_item">
-                                    <a href="#" class="nav-top-link">Miến</a>
+                                    <a href="cate.html" class="nav-top-link">Miến</a>
                                 </li>
                                 <li class="menu_item">
-                                    <a href="#" class="nav-top-link">Món Thêm</a>
+                                    <a href="cate.html" class="nav-top-link">Món Thêm</a>
                                 </li>
                                 <li class="menu_item">
-                                    <a href="#" class="nav-top-link">Nước Uống</a>
+                                    <a href="cate.html" class="nav-top-link">Nước Uống</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="header_function">
                             <ul class="header_function_inner">
                                 <li class="account">
-                                    <a href="#" data-open="#login-form-popup"><span>Đăng nhập</span> </a>
+                                    <a href="#" data-toggle="modal" data-target="#login_form_popup"><span>Đăng nhập</span> </a>
                                 </li>
                                 <li class="header_divider"></li>
                                 <li class="header_cart">
                                     <div class="header_cart_button">
-                                        <a href="#" title="Giỏ hàng" class="btn rounded text-uppercase">
+                                        <a href="cart.html" title="Giỏ hàng" class="btn rounded text-uppercase pc">
                                             <span class="header_cart_title">
-                                                Giỏ hàng / <span class="cart_price"><span class="amount">0<span class="currency_symbol">₫</span></span></span>
+                                                Giỏ hàng / <span class="cart_price"><span class="amount">35,000<span class="currency_symbol">₫</span></span></span>
                                             </span>
-                                            <i class="fa fa-shopping-basket" data-icon-label="0"></i>
+                                            <i class="fa fa-shopping-basket" data-icon-label="3"></i>
                                         </a>
+                                        <a href="cart.html" title="Giỏ hàng" class="btn rounded sp"><i class="fa fa-shopping-basket" data-icon-label="3"></i></a>
                                     </div>
                                     <ul class="header_cart_item">
-                                        <li class="html widget_shopping_cart">
-                                            <div class="widget_shopping_cart_content">
-                                                <p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ hàng.</p>
+                                        <li class="header_cart_item_widget">
+                                            <div class="content">
+                                                <p class="message">Chưa có sản phẩm trong giỏ hàng.</p>
+                                                <ul class="list_mini_cart">
+                                                    <li class="mini_cart_item">
+                                                        <a href="#" class="remove" aria-label="Xóa sản phẩm này">×</a>
+                                                        <a class="name" href="#">
+                                                            <img src="images/cart_01.jpg" alt="">Bánh Canh Cá Lốc Hai Nhiên
+                                                        </a>
+                                                        <span class="quantity">1 × <span class="amount">35,000<span class="currencySymbol">₫</span></span></span>
+                                                    </li>
+                                                    <li class="mini_cart_item">
+                                                        <a href="#" class="remove" aria-label="Xóa sản phẩm này">×</a>
+                                                        <a class="name" href="#">
+                                                            <img src="images/cart_01.jpg" alt="">Bánh Canh Cá Lốc Hai Nhiên
+                                                        </a>
+                                                        <span class="quantity">1 × <span class="amount">35,000<span class="currencySymbol">₫</span></span></span>
+                                                    </li>
+                                                    <li class="mini_cart_item">
+                                                        <a href="#" class="remove" aria-label="Xóa sản phẩm này">×</a>
+                                                        <a class="name" href="#">
+                                                            <img src="images/cart_01.jpg" alt="">Bánh Canh Cá Lốc Hai Nhiên
+                                                        </a>
+                                                        <span class="quantity">1 × <span class="amount">35,000<span class="currencySymbol">₫</span></span></span>
+                                                    </li>
+                                                </ul>
+                                                <p class="mini_cart_total"><strong>Tổng phụ:</strong> <span class="amount">35,000<span class="currencySymbol">₫</span></span></p>
+                                                <p class="mini_cart_button"><a href="cart.html" class="btn">Xem giỏ hàng</a></p>
                                             </div>
                                         </li>
                                     </ul>
@@ -329,12 +358,43 @@
             		</div>
             	</div>
             </div>
+
+
         </footer>
         <!-- Footer -->
         <a id="return-to-top" class="td-scroll-up" href="javascript:void(0)">
             <i class="fa fa-angle-up" aria-hidden="true"></i>
         </a>
         <!-- return-to-top -->
+        <div class="modal fade m_modal_login" id="login_form_popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="m_form_login">
+                            <h3 class="title">Đăng Nhập</h3>
+                            <form action="" method="post">
+                                <div class="form-group">
+                                    <label class="ttl" for="username">Tên tài khoản hoặc địa chỉ email *</label>
+                                    <input type="text" id="username" class="form-control" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label class="ttl" for="password">Mật khẩu *</label>
+                                    <input type="text" id="password" class="form-control" placeholder="">
+                                </div>
+                                <p class="form-group">
+                                    <button type="submit" class="btn" name="login" value="Đăng nhập">Đăng nhập</button>
+                                    <label class="checkbox">
+                                        <input name="rememberme" type="checkbox" id="rememberme" value="forever"> <strong>Ghi nhớ mật khẩu</strong>
+                                    </label>
+                                </p>
+                                <p class="lost_password"><a href="https://banhcanhbotgaohainhien.3mm.shop/my-account/lost-password/">Quên mật khẩu?</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal -->
     </div>
 
     <!-- jQuery -->
