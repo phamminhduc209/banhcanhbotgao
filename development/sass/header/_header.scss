@@ -4,7 +4,12 @@
     background-size: cover;
     background-position: 50% 0;
     transition: background-color .3s, opacity .3s;
-
+    .sticky-wrapper.is-sticky {
+        .header_inner {
+            background: #FFF;
+            z-index: 9;
+        }
+    }
     &_inner {
         position: relative;
 

@@ -130,23 +130,18 @@
     .m_btn_booknow {
         display: block;
     }
-    .td-scroll-up {
-        bottom: 60px;
+    .td_scroll_up {
+        bottom: 65px;
+        right: 10px;
     }
 }
 
 @media screen and (min-width: 550px) {
     .shop_container {
-        // .row {
-        //  margin-right: -9.8px;
-        //     margin-left: -9.8px;
-        // }
         .item {
             -ms-flex: 0 0 33.333333%;
             flex: 0 0 33.333333%;
             max-width: 33.333333%;
-            // padding-right: 9.8px;
-            // padding-left: 9.8px;
         }
     }
 }

@@ -1,19 +1,21 @@
 (function ($) {
     "use strict";
 
+    // Back To Top
     $(window).scroll(function () {
         if ($(this).scrollTop() >= 200) {
-            $('#return-to-top').addClass('td-scroll-up-visible');
+            $('.td_scroll_up').addClass('td_scroll_up_visible');
         } else {
-            $('#return-to-top').removeClass('td-scroll-up-visible');
+            $('.td_scroll_up').removeClass('td_scroll_up_visible');
         }
     });
-    $('#return-to-top').click(function () {
+    $('.td_scroll_up').click(function () {
         $('body,html').animate({
             scrollTop: 0
         }, 'slow');
     });
 
+    // Increase or decrease in quantity
     $('.product_qty .qty_inc').click(function () {
         var val = $('.product_qty .control input').val();
         $('.product_qty .control input').val(parseInt(val) + 1);
@@ -24,6 +26,7 @@
             $('.product_qty .control input').val(parseInt(val) - 1);
     });
 
+    // Slide Carousel 
     $(document).ready(function () {
         $(".owl-carousel").each(function (index, el) {
             var config = $(this).data();
@@ -40,43 +43,48 @@
         });
     });
 
+    // Show menu on mobile
     $('.btn_mobile_nav').click(function () {
         $('html').css('overflow', 'hidden');
         $('.m_menu_mobile_overlay').addClass('active');
         $('.m_menu_mobile').addClass('active')
     });
+    // Hide menu on mobile
     $('.m_menu_mobile_close').click(function () {
         $('html').css('overflow', '');
         $('.m_menu_mobile_overlay').removeClass('active');
         $('.m_menu_mobile').removeClass('active')
     });
 
+    // Show cart on mobile
     $('.btn_mobile_cart').click(function () {
         $('html').css('overflow', 'hidden');
         $('.m_cart_mobile_overlay').addClass('active');
         $('.m_cart_mobile').addClass('active')
     });
+    // Hide cart on mobile
     $('.m_cart_mobile_close').click(function () {
         $('html').css('overflow', '');
         $('.m_cart_mobile_overlay').removeClass('active');
         $('.m_cart_mobile').removeClass('active')
     });
 
+    // Footer is not covered under mobile
     function reduceFooter() {
         var HeightBtn = $('.m_btn_booknow').height() + 20;
         $('.footer').css('padding-bottom', HeightBtn);
-    }
-
+    };
     reduceFooter();
     $(window).on('load resize', function () {
         reduceFooter();
-    })
+    });
 
-    $('.shipping_address_other').hide();
-    if ($("#other_address").is(':checked')) {
-        $(this).parent().next().show();
-    } else {
-        // Code in the case checkbox is NOT checked.
-    }
+    // Sticky Header
+    $(document).ready(function(){
+        $(".header_inner").sticky({
+            topSpacing: 0,
+            zIndex: 9,
+        });
+    });
 
 })(jQuery); // End of use strict

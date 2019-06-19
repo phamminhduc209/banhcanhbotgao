@@ -185,7 +185,7 @@
 
 
 
-.td-scroll-up {
+.td_scroll_up {
     cursor: pointer;
     position: fixed;
     bottom: 20px;
@@ -224,7 +224,7 @@
     }
 }
 
-.td-scroll-up-visible {
+.td_scroll_up_visible {
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
