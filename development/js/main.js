@@ -63,7 +63,7 @@
     });
 
     function reduceFooter() {
-        var HeightBtn = $('.m_btn_booknow').height();
+        var HeightBtn = $('.m_btn_booknow').height() + 20;
         $('.footer').css('padding-bottom', HeightBtn);
     }
 
