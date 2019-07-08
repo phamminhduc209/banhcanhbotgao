@@ -136,6 +136,17 @@
     }
 }
 
+@media screen and (max-width: 767px) {
+    .product_item {
+        .product_image {
+            height: 180px;
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 550px) {
     .shop_container {
         .item {
